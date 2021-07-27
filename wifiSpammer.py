@@ -99,11 +99,6 @@ if args.list_vendors:
 if not args.interface:
     print("Interface not specified. Extiting...")
     sys.exit(0)
-else:
-    interfaces = os.listdir("/sys/class/net/")
-    if args.interface not in interfaces:
-        print("Interface not found")
-        sys.exit(0)
 
 # Set interface in monitor mode
 setMonitor(args.interface)
