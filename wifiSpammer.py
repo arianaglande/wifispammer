@@ -81,10 +81,7 @@ parser.add_argument("-l", "--list-vendors",action="store_true", help="List vendo
 parser.add_argument("-r", "--random-mac",action="store_true", help="Uses a fully random BSSID instead of using a vendor")
 args = parser.parse_args()
 
-# Check OS
-if sys.platform.lower() != "linux":
-    print("This script only works in Linux!")
-    sys.exit(0)
+
 
 # Check root
 if os.getuid() != 0:
